@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Noto+Sans+Telugu:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Cinzel", serif;
+  --font-subheading: "Playfair Display", serif;
+  --font-telugu: "Noto Sans Telugu", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)), url('watermarked_img_1906516921117892876.png');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    font-family: "Inter", "Noto Sans Telugu", ui-sans-serif, system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+}
+
+/* Premium Gold Accent for Buttons & Highlights */
+.primary-btn {
+    background-color: #bfa15f; /* Gold Color */
+    color: #000000;
+    font-weight: bold;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.primary-btn:hover {
+    background-color: #d4b773;
+}
+
+/* Custom glow animations and cinematic effects */
+@keyframes goldGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 10px rgba(234, 179, 8, 0.4)) drop-shadow(0 0 20px rgba(234, 179, 8, 0.2));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgba(234, 179, 8, 0.7)) drop-shadow(0 0 35px rgba(234, 179, 8, 0.4));
+  }
+}
+
+@keyframes slowPan {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.gold-glow-animated {
+  animation: goldGlow 4s infinite ease-in-out;
+}
+
+/* Hide scrollbars but keep functionality */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* AI Director's Desk Custom Legacy & Modern Stylesheets based on User Request */
+
+/* ప్రధాన కంటైనర్ స్టైల్స్ */
+.ai-directors-desk-container {
+    display: flex;
+    background: linear-gradient(145deg, #0f1c26, #070d14);
+    border: 3px solid #bfa15f; /* ప్రీమియం గోల్డ్ బోర్డర్ */
+    border-radius: 20px;
+    padding: 25px;
+    color: #ffffff;
+    font-family: "Inter", "Noto Sans Telugu", sans-serif;
+    gap: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+    margin: 20px auto;
+    max-width: 1400px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ఎడమ వైపు బ్రాండింగ్ సైడ్బార్ */
+.branding-sidebar {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    border-right: 1px solid rgba(191, 161, 95, 0.3);
+    padding-right: 20px;
+    gap: 15px;
+}
+
+.seal-img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 9999px;
+    border: 2px solid rgba(191, 161, 95, 0.45);
+    background-color: #000;
+    filter: drop-shadow(0 6px 16px rgba(0,0,0,0.65));
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+}
+
+.seal-img:hover {
+    transform: scale(1.06) rotate(3deg);
+    border-color: rgba(191, 161, 95, 0.82);
+}
+
+.branding-title {
+    font-size: 22px;
+    letter-spacing: 2px;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.gold-text {
+    color: #bfa15f;
+    font-size: 18px;
+}
+
+.branding-tagline {
+    font-size: 13px;
+    color: #cccccc;
+    margin-top: 15px;
+    font-style: italic;
+}
+
+/* మధ్య భాగం: సినిమాటిక్ పోస్టర్ డ్యాష్బోర్డ్ */
+.slate-poster-dashboard {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.dashboard-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.dashboard-header h2 {
+    color: #bfa15f;
+    font-size: 28px;
+    margin: 0;
+}
+
+.dashboard-header .sub-heading {
+    font-size: 16px;
+    color: #ffffff;
+    margin: 5px 0 0 0;
+    letter-spacing: 1px;
+}
+
+/* 6 ఇమేజ్ గ్రిడ్ లేఅవుట్ */
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.movie-card {
+    background: #0b131a;
+    border: 1px solid rgba(191, 161, 95, 0.4);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    text-align: center;
+    cursor: pointer;
+}
+
+.movie-card:hover, .movie-card.active-card {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(191, 161, 95, 0.35);
+    border-color: #bfa15f;
+}
+
+.movie-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-bottom: 1px solid rgba(191, 161, 95, 0.2);
+}
+
+.movie-info {
+    padding: 10px;
+}
+
+.movie-info h3 {
+    margin: 0;
+    font-size: 14px;
+    color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.movie-info .subtitle {
+    margin: 3px 0 0 0;
+    font-size: 11px;
+    color: #a0a0a0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dashboard-footer-text {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #bfa15f;
+    font-weight: bold;
+}
+
+/* కుడి వైపు AI కంట్రోల్స్ ప్యానెల్ */
+.ai-controls-sidebar {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+    border-left: 1px solid rgba(191, 161, 95, 0.3);
+    padding-left: 20px;
+}
+
+.control-box {
+    background: rgba(11, 19, 26, 0.6);
+    border: 1px solid rgba(191, 161, 95, 0.2);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.control-box h4 {
+    margin: 0 0 15px 0;
+    font-size: 13px;
+    color: #bfa15f;
+    text-align: center;
+    border-bottom: 1px solid rgba(191, 161, 95, 0.15);
+    padding-bottom: 5px;
+}
+
+/* విశ్లేషణ గ్రాఫ్ బార్స్ */
+.analysis-bars {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 80px;
+    gap: 8px;
+    padding: 10px 0;
+}
+
+.bar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.bar {
+    width: 14px;
+    background: linear-gradient(to top, #735a2b, #bfa15f);
+    border-radius: 4px 4px 0 0;
+    transition: height 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bar-label {
+    font-size: 8px;
+    color: #a0a0a0;
+    margin-top: 4px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+/* D-Pad కంట్రోల్స్ */
+.text-center { text-align: center; }
+.d-pad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.arrow-row {
+    display: flex;
+    gap: 15px;
+}
+
+.arrow {
+    cursor: pointer;
+    color: #bfa15f;
+    font-size: 18px;
+    user-select: none;
+    transition: color 0.2s, transform 0.1s;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(191, 161, 95, 0.2);
+    border-radius: 50%;
+}
+
+.arrow:hover { 
+    color: #ffffff; 
+    border-color: #bfa15f;
+    background: rgba(191, 161, 95, 0.1);
+}
+
+.arrow:active {
+    transform: scale(0.9);
+}
+
+/* కాల్ టు యాక్షన్ బటన్ */
+.director-action-btn {
+    background: linear-gradient(135deg, #bfa15f, #8c703d);
+    border: none;
+    border-radius: 8px;
+    color: #000000;
+    padding: 15px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    box-shadow: 0 4px 15px rgba(191, 161, 95, 0.2);
+}
+
+.director-action-btn:hover {
+    transform: scale(1.03);
+    box-shadow: 0 5px 15px rgba(191, 161, 95, 0.4);
+}
+
+.director-action-btn:active {
+    transform: scale(0.98);
+}
+
+.btn-subtext {
+    display: block;
+    font-size: 11px;
+    margin-top: 4px;
+    opacity: 0.8;
+}
+
+/* రెస్పాన్సివ్ డిజైన్ (మొబైల్ స్క్రీన్ల కోసం) */
+@media (max-width: 992px) {
+    .ai-directors-desk-container {
+        flex-direction: column;
+    }
+    .branding-sidebar, .ai-controls-sidebar {
+        border-right: none;
+        border-left: none;
+        padding: 0;
+        border-top: 1px solid rgba(191, 161, 95, 0.3);
+        border-bottom: 1px solid rgba(191, 161, 95, 0.3);
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .movies-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .movies-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .movies-grid {
+        grid-template-columns: 1fr;
+    }
+}
+

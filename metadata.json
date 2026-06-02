@@ -1,0 +1,6 @@
+{
+  "name": "VIJAYARANGA",
+  "description": "Interactive production promo, cinematic trailer storyboard, and movie story pitch engine for VIJAYARANGA. Stories That Create History.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
